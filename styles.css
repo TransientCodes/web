@@ -17,6 +17,7 @@ body {
     margin: 0 auto;
 }
 
+/* Header Bereich */
 header {
     background-color: #3e2723;
     padding: 20px;
@@ -28,6 +29,7 @@ header h1 {
     font-size: 3rem;
     color: #d7a972;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 header p {
@@ -50,10 +52,29 @@ nav ul li a {
     color: #d7a972;
     text-decoration: none;
     font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 5px;
 }
 
 nav ul li a:hover {
     color: #f3f3f3;
+    border-bottom: 2px solid #f3f3f3;
+}
+
+/* Box-Design für Abschnitte */
+.box {
+    background: rgba(50, 50, 50, 0.9);
+    padding: 30px;
+    border: 3px solid #d7a972;
+    border-radius: 10px;
+    margin-top: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-Animation für Boxen */
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Über uns Sektion */
@@ -89,6 +110,7 @@ nav ul li a:hover {
 
 .features-section ul {
     list-style-type: none;
+    padding: 0;
 }
 
 .features-section ul li {
@@ -149,6 +171,7 @@ nav ul li a:hover {
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact-btn:hover {
