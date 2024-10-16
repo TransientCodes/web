@@ -1,0 +1,168 @@
+/* Grundlegendes Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #1b1b1b;
+    color: #f3f3f3;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #3e2723;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #d7a972;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #d7a972;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #f3f3f3;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #d7a972;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #f3f3f3;
+}
+
+/* Über uns Sektion */
+.about-section {
+    background-color: #2b2b2b;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #d7a972;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    color: #f3f3f3;
+}
+
+/* Features Sektion */
+.features-section {
+    background-color: #1e1e1e;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    color: #d7a972;
+    margin-bottom: 20px;
+}
+
+.features-section ul {
+    list-style-type: none;
+}
+
+.features-section ul li {
+    font-size: 1.2rem;
+    color: #f3f3f3;
+    margin: 10px 0;
+    position: relative;
+}
+
+.features-section ul li:before {
+    content: "⚙";
+    color: #d7a972;
+    font-size: 1.5rem;
+    position: absolute;
+    left: -25px;
+}
+
+/* Team Sektion */
+.team-section {
+    background-color: #2b2b2b;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    color: #d7a972;
+    margin-bottom: 20px;
+}
+
+.team-section p {
+    font-size: 1.2rem;
+    color: #f3f3f3;
+}
+
+/* Kontakt Sektion */
+.contact-section {
+    background-color: #1e1e1e;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #d7a972;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    color: #f3f3f3;
+}
+
+.contact-btn {
+    background-color: #d7a972;
+    color: #1b1b1b;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.contact-btn:hover {
+    background-color: #f3f3f3;
+    color: #1b1b1b;
+}
+
+/* Footer */
+footer {
+    background-color: #3e2723;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: #d7a972;
+}
