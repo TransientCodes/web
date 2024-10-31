@@ -7,6 +7,7 @@ async function loadEntries() {
 
     entries.forEach((entry, index) => {
         const li = document.createElement('li');
+        // Nummerierung im Format "1. Dein Eintrag", "2. Dein Eintrag" usw.
         li.textContent = `${index + 1}. ${entry}`;
         entryList.appendChild(li);
     });
