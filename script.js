@@ -1,36 +1,35 @@
 // script.js
-
-// Funktion, um Einträge zu laden
-function loadEntries() {
-    const entries = JSON.parse(localStorage.getItem('entries')) || [];
+async function loadEntries() {
+    const response = await fetch('/entries');
+    const entries = await response.json();
     const entryList = document.getElementById('entryList');
-    entryList.innerHTML = ''; // Liste leeren
+    entryList.innerHTML = '';
 
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
         const li = document.createElement('li');
-        li.textContent = entry;
+        li.textContent = `${index + 1}. ${entry}`;
         entryList.appendChild(li);
     });
 }
 
-// Funktion, um neuen Eintrag hinzuzufügen
-function addEntry(entryText) {
-    const entries = JSON.parse(localStorage.getItem('entries')) || [];
-    entries.push(entryText);
-    localStorage.setItem('entries', JSON.stringify(entries));
+async function addEntry(entryText) {
+    await fetch('/entries', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ entry: entryText }),
+    });
+    loadEntries();
 }
 
-// Eventlistener für das Formular
 document.getElementById('entryForm').addEventListener('submit', function(e) {
     e.preventDefault();
-
     const entryText = document.getElementById('entry').value.trim();
     if (entryText) {
-        addEntry(entryText); // Eintrag speichern
-        loadEntries();       // Einträge neu laden
-        document.getElementById('entry').value = ''; // Eingabefeld leeren
+        addEntry(entryText);
+        document.getElementById('entry').value = '';
     }
 });
 
-// Seite laden und Einträge anzeigen
 document.addEventListener('DOMContentLoaded', loadEntries);
